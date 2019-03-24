@@ -1,4 +1,4 @@
-package com.testing;
+package com.firebase;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -22,7 +22,7 @@ public class SwitchTo extends Reuse{
 		System.out.println(al.getText());
 		al.accept();  
 		Thread.sleep(3000);
-		WebElement prompt=findElement(By.xpath("//button[contains(text(),'Promt Alert')]"),"Prompt Alert");
+		WebElement prompt=findElement(By.xpath("//button[contains(text(),'Promt Aler')]"),"Prompt Alert");
 		clickButton(prompt,"Prompt alert");
 		Thread.sleep(4000);
 		Alert alert=driver.switchTo().alert();

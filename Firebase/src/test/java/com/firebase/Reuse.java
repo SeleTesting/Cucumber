@@ -1,7 +1,5 @@
-package com.testing;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+package com.firebase;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
