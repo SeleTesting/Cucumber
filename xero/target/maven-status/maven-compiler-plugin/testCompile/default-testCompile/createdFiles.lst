@@ -1,0 +1,11 @@
+Pages/AccountsPage.class
+Pages/MyXeroPage.class
+Pages/SignUpPage.class
+Pages/NavigationPage.class
+com/test/Reuse.class
+com/test/TestScripts.class
+Pages/LoginPage.class
+Pages/ProfilePage.class
+com/modules/LoginModule.class
+Pages/CreateAccountPage.class
+Pages/LogoutPage.class
