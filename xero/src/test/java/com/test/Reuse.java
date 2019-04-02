@@ -207,6 +207,19 @@ public class Reuse implements LoginModule{
 		}
 		return xldata;
 	}
+	public static boolean validate(String s1,String s2)
+	{  
+		if(s1.equals(s2))
+		{
+			logger.log(LogStatus.PASS," Assertion true "+s1);
+			return true;
+		}
+		else
+		{
+			logger.log(LogStatus.FAIL," Assertion false "+s1);
+			return false;
+		}	
+	}
 	//ending report
 	public static void EndReport()
 	{

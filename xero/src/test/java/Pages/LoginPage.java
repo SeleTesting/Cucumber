@@ -37,12 +37,11 @@ public class LoginPage extends Reuse {
 		enterText(pass, "PassWrod", recdata[1][1]);
 		WebElement lgn = findElement(By.id("submitButton"), "Login");
 		clickButton(lgn, "Login");
-		String str = findElement(By.xpath("//p[contains(text(),'Your email or password is incorrect')]"), "Error msg")
-				.getText();
+		String str1 = findElement(By.xpath("//p[contains(text(),'Your email or password is incorrect')]"), "Error msg").getText();
 		String str2 = "Your email or password is incorrect";
-		Assert.assertEquals(str, str2);
-		System.out.println("Error msg :" + str);
-		logger.log(LogStatus.PASS, "Error msg  :" + str);
+		System.out.println(validate(str1,str2));
+		System.out.println("Error msg :" + str1);
+		logger.log(LogStatus.PASS, "Error msg  :" + str1);
 		EndReport();
 	}
 	/*Enter InValid User Name
@@ -62,9 +61,7 @@ public class LoginPage extends Reuse {
 		clickButton(lgn, "Login");
 		String str = findElement(By.xpath("//p[contains(text(),'Your email or password is incorrect')]"), "Error msg").getText();
 		String str2 = "Your email or password is incorrect";
-		Assert.assertEquals(str, str2);
-		System.out.println("Error msg :" + str);
-		logger.log(LogStatus.PASS, "Error msg  :" + str);
+		System.out.println(validate(str,str2));
 		EndReport();
 	}
 

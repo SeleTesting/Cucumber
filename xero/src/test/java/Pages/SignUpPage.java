@@ -63,26 +63,26 @@ public class SignUpPage extends Reuse {
 		WebElement fn=findElement(By.xpath("//span[contains(text(),\"First name can't be empty\")]"), "First name Error ");
 		String str1=fn.getText();
 		String str2="First name can't be empty";
-		Assert.assertEquals(str1, str2);
+		System.out.println(validate(str1,str2));
 		Wait();
 		WebElement Ln=findElement(By.xpath("//span[contains(text(),\"Last name can't be empty\")]"), "First name Error ");
 		String str3=Ln.getText();
 		String str4="Last name can't be empty";
-		Assert.assertEquals(str3, str4);
+		System.out.println(validate(str3,str4));
 		WebElement email=findElement(By.xpath("//span[contains(text(),\"Email address can't be empty\")]"), "Email Error ");
 		String str5=email.getText();
 		String str6="Email address can't be empty";
-		Assert.assertEquals(str5, str6);
+		System.out.println(validate(str5,str6));
 		WebElement phone=findElement(By.xpath("//span[contains(text(),\"Phone number can't be empty\")]"), "Phone number Error ");
 		String str7=phone.getText();
 		String str8="Phone number can't be empty";
-		Assert.assertEquals(str7, str8);
+		System.out.println(validate(str7,str8));
 		WebElement EmailAddress = findElement(By.name("EmailAddress"), "EmailAddress");
 		enterText(EmailAddress, "userName","abc");
 		WebElement email1=findElement(By.xpath("//span[@id='signup-form-error-message-3']"), " invalid Email Error ");
 		String str9=email.getText();
 		String str10="Email address is invalid";
-		Assert.assertEquals(str9, str10);
+		System.out.println(validate(str9,str10));
 		WebElement color=findElement(By.xpath("//label[@class='form-label text']"), "Terms and policy highlighted");
 		System.out.println("text enabled:  "+color.isEnabled());
 		}
@@ -111,7 +111,7 @@ public class SignUpPage extends Reuse {
 		String str=driver.getCurrentUrl();
 		System.out.println(str);
 		String a="https://www.xero.com/us/about/terms/";
-		Assert.assertEquals(str,a);
+		System.out.println(validate(str,a));
 		driver.switchTo().window(getwin[0]);
 		WebElement privacy = findElement(By.xpath("//a[contains(text(),'privacy notice')]"), "privacy");
 		clickButton(privacy, "privacy");
@@ -120,8 +120,8 @@ public class SignUpPage extends Reuse {
 		System.out.println(getAllwindows1.size());
 		driver.switchTo().window(getwin1[2]);
 		String str1=driver.getCurrentUrl();
-		System.out.println(str1);
-		Assert.assertEquals(str1,"https://www.xero.com/us/about/privacy/");
+		String str2="https://www.xero.com/us/about/privacy/";
+		System.out.println(validate(str1,str2));
 		EndReport();
 	}
 	public void Tc2D() throws Exception 
@@ -141,7 +141,7 @@ public class SignUpPage extends Reuse {
 		driver.switchTo().window(getwin[1]);
 		String str=driver.getCurrentUrl();
 		System.out.println(str);
-		Assert.assertEquals(str,"https://www.xero.com/us/signup/offer-details/");		
+		System.out.println(validate(str,"https://www.xero.com/us/signup/offer-details/"));		
 		EndReport();
 	}
 	public void Tc2E() throws Exception 

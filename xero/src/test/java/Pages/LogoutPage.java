@@ -23,14 +23,8 @@ public class LogoutPage extends Reuse
 		clickButton(Logout,"Logout");
 		String[][] recdata = readExceldata("Data/DataFile.xls", "Sheet2");
 		WebElement un = findElement(By.id("email"), "User name");
-		try {
-			Assert.assertEquals(un.getText(),recdata[1][0]);
-			}
-		catch(AssertionError e) 
-		{
-			System.out.println("Assert fail "+e);
-			logger.log(LogStatus.FAIL,"Assert fail User name not Displayed");
-		}
+		String str=un.getText();
+		System.out.println(validate(str,recdata[0][0]));
 		System.out.println("User name field has   "+un.getText());
 		EndReport();
 	}
